@@ -221,3 +221,4 @@ Lessons are stored in `~/contentempire/lessons/` and fed back to improve future 
 
 *ContentEmpire - Growing knowledge for small-space gardeners*
 # Test commit to trigger redeploy
+Test deploy after fixing wrangler
