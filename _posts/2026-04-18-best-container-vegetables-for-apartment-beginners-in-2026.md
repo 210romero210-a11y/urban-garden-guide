@@ -1,12 +1,10 @@
 ---
 layout: post
 title: "Best Container Vegetables for Apartment Beginners in 2026"
-date: 2026-04-18 06:00:00 -0500
+date: 2026-04-18
 description: "Dreaming of harvesting your own fresh vegetables but stuck in an apartment with no yard? You're not alone. Millions of apartment dwellers are discovering tha..."
-categories: - container-gardening
-author: ContentEmpire
+categories: [indoor-gardening, container-gardening, apartment-gardening]
 ---
-
 
 # Best Container Vegetables for Apartment Beginners in 2026
 
