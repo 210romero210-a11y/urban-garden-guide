@@ -1,224 +1,150 @@
-# ContentEmpire System
+# ContentEmpire Next.js
 
-## Overview
-ContentEmpire is an automated content generation system focused exclusively on **Indoor/Urban/Apartment/Container Gardening** for beginners and small spaces.
+A modern, sophisticated Next.js 16+ blog for indoor, urban, apartment, and container gardening content.
 
-## Core Principles
-- **100% Gardening Content** - No AI, tech, Ubuntu, Ollama, or computing topics
-- **Beginner-Focused** - Accessible, practical advice for apartment dwellers
-- **Ethical Affiliates** - Honest product recommendations with proper disclosures
-- **SEO-Optimized** - Long-tail keywords, proper structure, readability focus
-- **Self-Improving** - Learning loop for continuous quality improvement
+## Profile: ContentEmpire-NextJS
 
-## Sub-Agents (Skills)
+**Topic Focus:** Indoor, Urban, Apartment, and Container Gardening for beginners and small spaces
 
-### 1. contentempire-researcher
-Identifies evergreen, low-competition topics in container gardening
-- Long-tail keyword research
-- Competition analysis
-- Content outline generation
+**Design Philosophy:**
+- Modern, elegant, and aesthetically pleasing
+- Dark mode as default
+- Primary color: Teal (#14b8a6)
+- Secondary accent: Light gray (#d1d5db)
 
-### 2. contentempire-seowriter
-Writes 1800-3000 word SEO articles
-- H1-H3 heading structure
-- Tables, lists, tips
-- FAQ sections
-- Meta descriptions
+## Technical Stack
 
-### 3. contentempire-affiliate
-Inserts 3-6 high-commission affiliate links naturally
-- FTC-compliant disclosures
-- Mix of price points
-- Contextual placement
-- **Priority Programs** (see below)
+- **Framework:** Next.js 16+ with App Router
+- **Language:** Strict TypeScript (strict: true)
+- **Styling:** Tailwind CSS
+- **Content:** MDX with frontmatter
+- **Deployment:** Static export for Cloudflare Pages
+- **Architecture:** Progressive Streaming, Partial Prerendering, Server Components
 
-### 4. contentempire-publisher
-Formats as Jekyll/Hugo Markdown
-- Front-matter with SEO meta
-- Proper file naming
-- Git publishing workflow
+## Skills Created
 
-### 5. contentempire-optimizer
-Extracts lessons for continuous improvement
-- Performance analysis
-- Content quality audits
-- Strategy refinement
+### 1. contentempire-next-researcher
+Research evergreen, low-competition topics in indoor/container gardening.
 
-## Affiliate Programs (Priority Order)
+### 2. contentempire-next-writer
+Generate sophisticated, engaging, SEO-optimized MDX articles (1800-3000 words).
 
-### 1. Seeds Now (20-25% commission) - HIGHEST PRIORITY
-**Best for**: All seed-related content, vegetable growing guides
-**Products**: Heirloom vegetable seeds, organic seeds, herb seeds, microgreen seeds
-**Link**: https://www.seedsnow.com/?ref=CONTENTEMPIRE
-**When to use**: Any article mentioning seeds, planting, or starting from seed
+### 3. contentempire-next-affiliate
+Naturally insert 3-6 relevant affiliate links with proper FTC disclosures.
 
-### 2. Click & Grow (10% commission)
-**Best for**: Indoor gardening, smart gardens, apartment herb growing
-**Products**: Smart Garden 3/9/25, plant pods, indoor growing systems
-**Link**: https://www.clickandgrow.com/?ref=CONTENTEMPIRE
-**When to use**: Indoor herb articles, beginner hydroponics, countertop gardens
+### 4. contentempire-next-imageprompter
+Create 5-7 detailed, high-quality image prompts for AI generators or stock photos.
 
-### 3. Succulents Box (10% commission)
-**Best for**: Low-light plants, houseplants, decorative indoor gardens
-**Products**: Succulent subscriptions, individual plants, care supplies
-**Link**: https://succulentsbox.com/?ref=CONTENTEMPIRE
-**When to use**: Low-light plant articles, houseplant guides, decor-focused content
+### 5. contentempire-next-publisher
+Output well-structured MDX files with rich frontmatter for Next.js routing.
 
-### 4. Gardener's Supply Company (8-12% commission)
-**Best for**: Gardening supplies, containers, tools, self-watering systems
-**Products**: Self-watering planters, grow lights, tools, raised beds
-**Link**: https://www.gardeners.com/?ref=CONTENTEMPIRE
-**When to use**: Container guides, tool recommendations, supply articles
+### 6. contentempire-next-master
+Master orchestrator that coordinates the full pipeline.
 
-### 5. AeroGarden (7.5-12% commission)
-**Best for**: Indoor herb gardens, hydroponic beginners
-**Products**: Harvest, Bounty, Farm models, seed pods
-**Link**: https://www.aerogarden.com/?ref=CONTENTEMPIRE
-**When to use**: Alternative to Click & Grow, well-known brand preference
+## Content Structure
 
-### 6. Gardyn (High ticket)
-**Best for**: Premium vertical gardening, serious indoor growers
-**Products**: Gardyn Home Kit, vertical growing systems
-**Link**: https://www.gardyn.com/?ref=CONTENTEMPIRE
-**When to use**: Premium/serious gardener content, vertical growing articles
-
-### 7. Amazon Associates (Volume baseline)
-**Best for**: Budget alternatives, general products, books, fast shipping
-**When to use**: Budget options, products other programs don't carry, price comparisons
-
-## Article-Type Affiliate Strategy
-
-### Seed/Vegetable Articles
-- **Primary**: Seeds Now (highest commission 20-25%)
-- **Secondary**: Gardener's Supply (self-watering containers)
-- **Tertiary**: Amazon (soil, basic containers)
-
-### Indoor/Herb Articles
-- **Primary**: Click & Grow OR AeroGarden
-- **Secondary**: Seeds Now (herb seeds)
-- **Tertiary**: Amazon (grow lights, pots)
-
-### Container/Supply Articles
-- **Primary**: Gardener's Supply
-- **Secondary**: Amazon (budget alternatives)
-- **Tertiary**: Click & Grow (smart containers)
-
-### Low-Light/Houseplant Articles
-- **Primary**: Succulents Box
-- **Secondary**: Amazon (grow lights)
-- **Tertiary**: Click & Grow (for herbs)
-
-### Vertical/Premium Articles
-- **Primary**: Gardyn
-- **Secondary**: Gardener's Supply
-- **Tertiary**: Click & Grow
-
-## Directory Structure
 ```
-~/contentempire/
-├── posts/          # Published articles
-├── images/         # Featured images
-├── lessons/        # Optimization logs
-└── README.md       # System documentation
+content/
+├── posts/           # MDX blog posts
+├── authors/         # Author JSON files
+└── categories/      # Category JSON files
+
+public/
+└── images/
+    └── articles/    # Article-specific images
 ```
 
-## Automated Publishing
+## First Article Generated
 
-### Cron Job
-- **Schedule**: Every 3 days at 9:00 AM (`0 9 */3 * *`)
-- **Job ID**: 43365de91720
-- **Next Run**: April 19, 2026
+**Title:** 10 Best Container Vegetables for Apartment Beginners in 2026
 
-### Pipeline Steps
-1. Research trending evergreen topic
-2. Write 1800-3000 word SEO article
-3. Insert 3-6 affiliate links with disclosure (prioritizing high-commission programs)
-4. Format as Jekyll Markdown
-5. Save to ~/contentempire/posts/
-6. Extract optimization lessons
+**File:** `content/posts/best-container-vegetables-apartment-beginners.mdx`
 
-## Article Queue (Evergreen Topics)
-1. Best Container Vegetables for Apartment Beginners ✓
-2. How to Start an Indoor Herb Garden on a Budget
-3. Best Grow Lights for Small Apartments
-4. Self-Watering Container Gardens for Busy People
-5. Balcony Garden Ideas for Renters
-6. Easiest Herbs to Grow Indoors for Beginners
-7. Container Gardening Soil Guide
-8. Small Space Vertical Garden Ideas
-9. Windowsill Garden Setup for Beginners
-10. Apartment Composting Methods
-11. Best Plants for Low-Light Apartments
-12. Container Garden Pest Control Naturally
-13. How to Grow Tomatoes in Containers
-14. Microgreens Growing Guide for Beginners
-15. Kitchen Counter Herb Garden Ideas
+**Stats:**
+- Word Count: ~3,200 words
+- Affiliate Links: 8
+- Images: 7 prompts
+- Reading Time: 12 minutes
 
-## First Sample Article
-**File**: `2026-04-18-best-container-vegetables-apartment-beginners.md`
-**Topic**: Best Container Vegetables for Apartment Beginners in 2026
-**Word Count**: ~2,600 words
-**Affiliate Links**: 7 optimized links
-  - 4x Seeds Now (20-25% commission)
-  - 2x Gardener's Supply (8-12% commission)
-  - 1x Click & Grow (10% commission)
+**SEO:**
+- Primary Keyword: "container vegetables apartment beginners"
+- Meta Title: "10 Best Container Vegetables for Apartment Beginners (2026)"
+- Structured Data: Article, FAQ, BreadcrumbList
 
-## Commands
+**Affiliate Programs:**
+- Seeds Now (20-25% commission) - seeds
+- Gardener's Supply (8-12% commission) - containers
+- Click & Grow (10% commission) - smart gardens
+- Amazon Associates (4% average) - general supplies
 
-### Generate Article Manually
+## Next.js Architecture Features
+
+- ✅ App Router with strict TypeScript
+- ✅ Static export (`output: 'export'`)
+- ✅ Progressive Streaming with nested Suspense
+- ✅ Server Components for Markdown processing
+- ✅ Partial Prerendering (PPR)
+- ✅ "use cache" directive for expensive operations
+- ✅ Server Actions for interactions
+- ✅ "use client" leaf pattern
+- ✅ Dynamic OG images (opengraph-image.tsx)
+- ✅ JSON-LD structured data
+- ✅ Dynamic sitemap.ts and robots.ts
+- ✅ Parallel Routes / Slots pattern
+- ✅ React Compiler support
+
+## Design System
+
+### Colors
+- Primary: `#14b8a6` (Teal)
+- Secondary: `#d1d5db` (Light Gray)
+- Background Dark: `#0f172a` (Slate 900)
+- Background Card: `#1e293b` (Slate 800)
+- Text Primary: `#f8fafc` (Slate 50)
+- Text Secondary: `#94a3b8` (Slate 400)
+
+### Typography
+- Headings: Inter or Geist
+- Body: Inter or system-ui
+- Code: JetBrains Mono or Fira Code
+
+## Usage
+
+### Generate New Article
 ```bash
-# Run the full pipeline
-hermes skill:contentempire-master
-
-# Or run individual agents
-hermes skill:contentempire-researcher
-hermes skill:contentempire-seowriter
-hermes skill:contentempire-affiliate
-hermes skill:contentempire-publisher
+hermes skill use contentempire-next-master
 ```
 
-### Manage Cron Job
+### Schedule Automated Publishing
 ```bash
-# List jobs
-hermes cron list
-
-# Pause publishing
-hermes cron pause 43365de91720
-
-# Resume publishing
-hermes cron resume 43365de91720
-
-# Run immediately (test)
-hermes cron run 43365de91720
+hermes cron create \
+  --skill contentempire-next-master \
+  --schedule "0 9 */3 * *" \
+  --name "ContentEmpire Publishing"
 ```
 
-## Affiliate Disclosure Template
-```markdown
-*This post contains affiliate links. If you purchase through these links, 
-I may earn a commission at no extra cost to you. We only recommend 
-products we genuinely believe will help your garden thrive.*
-```
+## Affiliate Programs Integrated
 
-## Content Guidelines
-- Target: 1800-3000 words
-- Structure: H1 + 4-6 H2s + H3s
-- Elements: Tables, bullet lists, Quick Tips, FAQ
-- Tone: Friendly, encouraging, beginner-focused
-- Images: Suggest featured image in front-matter
-- **Affiliates**: 3-6 links per article, prioritize high-commission programs
+| Program | Commission | Best For |
+|---------|-----------|----------|
+| Seeds Now | 20-25% | Vegetable/herb seeds |
+| Gardener's Supply | 8-12% | Containers, supplies |
+| Click & Grow | 10% | Smart gardens |
+| AeroGarden | 7.5-12% | Hydroponic systems |
+| Succulents Box | 10% | Indoor plants |
+| Amazon Associates | 4% | General supplies |
 
-## Learning Loop
-After each article, the optimizer extracts:
-- What worked well
-- What to improve
-- Keyword insights
-- Affiliate performance notes
-- Structure effectiveness
+## Content Categories
 
-Lessons are stored in `~/contentempire/lessons/` and fed back to improve future articles.
+- container-gardening
+- indoor-gardening
+- herb-gardening
+- urban-gardening
+- beginner-guides
+- plant-care
+- hydroponics
+- small-spaces
 
----
+## License
 
-*ContentEmpire - Growing knowledge for small-space gardeners*
-# Test commit to trigger redeploy
-Test deploy after fixing wrangler
+ContentEmpire - All rights reserved.
