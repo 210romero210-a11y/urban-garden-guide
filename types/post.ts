@@ -12,7 +12,8 @@ export interface Post {
 
 export interface PostFrontmatter {
   title: string
-  excerpt: string
+  excerpt?: string
+  description?: string
   date: string
   coverImage?: string
   tags: string[]

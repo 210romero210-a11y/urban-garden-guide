@@ -5,6 +5,21 @@ import type { Post, PostFrontmatter } from '@/types/post'
 
 const contentDirectory = path.join(process.cwd(), 'content')
 
+/**
+ * Recursively find all MDX/MD files in a directory
+ */
+function getAllFiles(dir: string, fileArray: string[] = []): string[] {
+  const files = fs.readdirSync(dir)
+  files.forEach((file) => {
+    if (fs.statSync(path.join(dir, file)).isDirectory()) {
+      getAllFiles(path.join(dir, file), fileArray)
+    } else {
+      fileArray.push(path.join(dir, file))
+    }
+  })
+  return fileArray
+}
+
 function calculateReadingTime(content: string): string {
   const wordsPerMinute = 200
   const words = content.trim().split(/\s+/).length
@@ -17,21 +32,27 @@ export function getAllPosts(): Post[] {
     return []
   }
 
-  const files = fs.readdirSync(contentDirectory)
-  const mdxFiles = files.filter((file) => file.endsWith('.mdx') || file.endsWith('.md'))
+  // Get all files recursively
+  const allFiles = getAllFiles(contentDirectory)
+  const mdxFiles = allFiles.filter((file) => file.endsWith('.mdx') || file.endsWith('.md'))
 
   const posts = mdxFiles.map((file) => {
-    const filePath = path.join(contentDirectory, file)
+    const filePath = file
     const fileContents = fs.readFileSync(filePath, 'utf8')
     const { data, content } = matter(fileContents)
     const frontmatter = data as PostFrontmatter
 
-    const slug = file.replace(/\.(mdx|md)$/, '')
+    // Get relative path from contentDirectory for slug
+    const relativePath = path.relative(contentDirectory, filePath)
+    const slug = relativePath.replace(/\.(mdx|md)$/, '')
+
+    // Handle both 'excerpt' and 'description' fields for backward compatibility
+    const excerpt = frontmatter.excerpt || frontmatter.description || ''
 
     return {
       slug,
       title: frontmatter.title || 'Untitled',
-      excerpt: frontmatter.excerpt || '',
+      excerpt,
       date: frontmatter.date || new Date().toISOString().split('T')[0],
       readingTime: calculateReadingTime(content),
       coverImage: frontmatter.coverImage,
