@@ -515,3 +515,124 @@ Happy gardening!
 ---
 
 *Have questions about starting your container garden? Drop a comment below. And if you found this guide helpful, share it with a friend who's been wanting to try apartment gardening!*
+
+---
+
+## Article Images
+
+### Image 1: Hero - Balcony Container Garden Overview
+**Type:** Hero  
+**Placement:** Top of article (featured image)  
+**Jekyll Syntax:**
+```markdown
+![Cherry tomatoes, lettuce, and herbs growing in containers on sunny apartment balcony]({{ site.baseurl }}/assets/images/best-container-vegetables-for-apartment-beginners-in-2026/image-1-hero.jpg)
+```
+
+**AI Image Prompt:**
+> A vibrant apartment balcony garden with multiple containers growing cherry tomatoes, lettuce, and herbs, morning sunlight streaming through, photorealistic style, warm and inviting atmosphere, shot from eye level showing the full balcony setup, terracotta and fabric pots arranged aesthetically, lush green plants with visible vegetables, city skyline softly blurred in background, professional lifestyle photography, 4K quality
+
+**SEO Alt Text:**
+> Cherry tomatoes, lettuce, and herbs growing in containers on sunny apartment balcony
+
+**Stock Photo Search Terms:**
+- "apartment balcony container vegetable garden"
+- "urban balcony garden with tomatoes and herbs"
+- "small space container gardening setup"
+- "sunny balcony with potted vegetables"
+
+---
+
+### Image 2: Setup - Planting in Containers Step by Step
+**Type:** Setup  
+**Placement:** After "What You Need to Get Started" section  
+**Jekyll Syntax:**
+```markdown
+![Hands planting vegetable seedlings into container pot with quality potting soil]({{ site.baseurl }}/assets/images/best-container-vegetables-for-apartment-beginners-in-2026/image-2-setup.jpg)
+```
+
+**AI Image Prompt:**
+> Close-up of hands planting a small vegetable seedling into a black fabric grow bag filled with rich dark potting soil, gardening gloves visible, small trowel nearby, natural outdoor lighting, shallow depth of field focusing on the planting action, earthy tones with green plant contrast, instructional photography style, clean and clear composition, beginner-friendly aesthetic
+
+**SEO Alt Text:**
+> Hands planting vegetable seedlings into container pot with quality potting soil
+
+**Stock Photo Search Terms:**
+- "planting vegetables in containers step by step"
+- "hands potting seedlings into grow bags"
+- "container gardening soil preparation"
+- "beginner gardener planting vegetables"
+
+---
+
+### Image 3: Product - Cherry Tomatoes in Container
+**Type:** Product  
+**Placement:** Within "Cherry Tomatoes" section  
+**Jekyll Syntax:**
+```markdown
+![Ripe cherry tomatoes growing in terracotta pot on apartment balcony]({{ site.baseurl }}/assets/images/best-container-vegetables-for-apartment-beginners-in-2026/image-3-tomatoes.jpg)
+```
+
+**AI Image Prompt:**
+> A healthy cherry tomato plant laden with ripe red and orange fruits growing in a classic terracotta pot, bamboo stake support visible, water droplets on leaves from morning dew, macro photography style with sharp focus on tomatoes, soft bokeh background of balcony railing, vibrant colors emphasizing red against green foliage, natural sunlight from side angle, gardening magazine quality
+
+**SEO Alt Text:**
+> Ripe cherry tomatoes growing in terracotta pot on apartment balcony
+
+**Stock Photo Search Terms:**
+- "cherry tomato plant in terracotta pot"
+- "container grown tomatoes ripe on vine"
+- "balcony tomato plant with red fruit"
+- "patio cherry tomatoes ready to harvest"
+
+---
+
+### Image 4: Lifestyle - Person Tending Container Garden
+**Type:** Lifestyle  
+**Placement:** After introduction or in "Why Container Gardening" section  
+**Jekyll Syntax:**
+```markdown
+![Young woman watering container vegetable garden on small apartment balcony]({{ site.baseurl }}/assets/images/best-container-vegetables-for-apartment-beginners-in-2026/image-4-lifestyle.jpg)
+```
+
+**AI Image Prompt:**
+> A young person in casual clothing happily watering their container vegetable garden on a small apartment balcony, watering can in hand, morning light creating warm glow, genuine smile showing satisfaction, diverse representation, containers with various vegetables arranged around them, cozy urban setting, lifestyle photography, authentic moment, inspiring and approachable mood, shallow depth of field
+
+**SEO Alt Text:**
+> Young woman watering container vegetable garden on small apartment balcony
+
+**Stock Photo Search Terms:**
+- "person watering container garden balcony"
+- "urban gardener tending vegetable plants"
+- "apartment dweller gardening on patio"
+- "beginner gardener caring for plants"
+
+---
+
+### Image 5: Detail - Fresh Harvested Vegetables
+**Type:** Detail  
+**Placement:** Near conclusion or "Getting Started" section  
+**Jekyll Syntax:**
+```markdown
+![Fresh harvested lettuce, radishes, and herbs from container garden]({{ site.baseurl }}/assets/images/best-container-vegetables-for-apartment-beginners-in-2026/image-5-harvest.jpg)
+```
+
+**AI Image Prompt:**
+> A rustic wooden surface displaying freshly harvested vegetables from container garden: crisp lettuce leaves, small red radishes with greens attached, sprigs of basil and parsley, droplets of water on leaves indicating freshness, overhead flat lay composition, natural window lighting, earthy color palette with vibrant greens and reds, farm-to-table aesthetic, harvest photography style, inspiring and appetizing presentation
+
+**SEO Alt Text:**
+> Fresh harvested lettuce, radishes, and herbs from container garden
+
+**Stock Photo Search Terms:**
+- "fresh harvested container vegetables"
+- "homegrown lettuce and radishes harvest"
+- "apartment garden fresh produce"
+- "container vegetable harvest flat lay"
+
+---
+
+**Image Usage Notes:**
+- Place images at specified locations using the Jekyll syntax provided
+- Images should be added to: `assets/images/best-container-vegetables-for-apartment-beginners-in-2026/`
+- Use descriptive filenames matching the image descriptions
+- All images should be high-resolution (minimum 1200px wide)
+- Consider using AI image generators with the provided prompts or search free stock photo sites (Unsplash, Pexels, Pixabay) using the suggested terms
