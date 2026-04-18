@@ -1,14 +1,15 @@
 title: Urban Garden Guide
 description: Practical tips for indoor, apartment, and container gardening for beginners
-url: "https://your-project-name.pages.dev"   # Will be updated later
-baseurl: ""
-timezone: America/Chicago   # Change to your timezone if needed
-markdown: kramdown
+baseurl: ""          # IMPORTANT: Must be empty
+url: "https://urban-garden-guide.pages.dev"   # Change to your actual Cloudflare URL
+
 permalink: /:title/
 
-# Theme (we'll use a good free one later)
-theme: minima   # Temporary starter; we'll upgrade
+markdown: kramdown
 
-# SEO & plugins (add more later)
+# Theme (we'll upgrade soon)
+theme: minima
+
 plugins:
   - jekyll-seo-tag
+  - jekyll-feed
