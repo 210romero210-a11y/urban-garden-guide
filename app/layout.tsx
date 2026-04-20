@@ -38,9 +38,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${inter.variable} dark`}>
-      <body className="bg-slate-900 text-slate-50 min-h-screen flex flex-col">
+      <body className="bg-slate-950 text-slate-50 min-h-screen flex flex-col">
         {/* Header */}
-        <header className="border-b border-slate-800 bg-slate-900/80 backdrop-blur-sm sticky top-0 z-50">
+        <header className="border-b border-slate-800/50 bg-slate-950/80 backdrop-blur-sm sticky top-0 z-50">
           <div className="max-w-6xl mx-auto px-4">
             <nav className="flex items-center justify-between h-16">
               {/* Logo */}

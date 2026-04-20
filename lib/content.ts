@@ -109,12 +109,22 @@ function parseFrontmatter(frontmatter: string): Record<string, any> {
   let currentValue: any = null;
   let inArray = false;
   
+  // Helper to strip surrounding quotes
+  const stripQuotes = (val: any): any => {
+    if (typeof val !== 'string') return val;
+    if ((val.startsWith('"') && val.endsWith('"')) || 
+        (val.startsWith("'") && val.endsWith("'"))) {
+      return val.slice(1, -1);
+    }
+    return val;
+  };
+  
   for (const line of lines) {
     const trimmed = line.trim();
     
     // Array start
     if (trimmed.startsWith('- ') && inArray) {
-      (currentValue as string[]).push(trimmed.slice(2));
+      (currentValue as string[]).push(stripQuotes(trimmed.slice(2)));
       continue;
     }
     
@@ -129,7 +139,7 @@ function parseFrontmatter(frontmatter: string): Record<string, any> {
     const keyMatch = trimmed.match(/^(\w+):\s*(.*)$/);
     if (keyMatch) {
       if (currentKey && currentValue !== null) {
-        result[currentKey] = currentValue;
+        result[currentKey] = stripQuotes(currentValue);
       }
       currentKey = keyMatch[1];
       const value = keyMatch[2].trim();
@@ -149,17 +159,19 @@ function parseFrontmatter(frontmatter: string): Record<string, any> {
     if (nestedMatch && currentValue) {
       if (Array.isArray(currentValue)) {
         // Continue array
-        (currentValue as string[]).push(trimmed.replace(/^-\s*/, ''));
-      } else {
+        (currentValue as string[]).push(stripQuotes(trimmed.replace(/^-\s*/, '')));
+      } else if (typeof currentValue === 'object') {
         // Add to object
-        (currentValue as Record<string, string>)[nestedMatch[1]] = nestedMatch[2].trim();
+        (currentValue as Record<string, string>)[nestedMatch[1]] = stripQuotes(nestedMatch[2].trim());
       }
     }
   }
   
   // Don't forget the last key
   if (currentKey && currentValue !== null) {
-    result[currentKey] = currentValue;
+    result[currentKey] = Array.isArray(currentValue) 
+      ? currentValue 
+      : stripQuotes(currentValue);
   }
   
   return result;

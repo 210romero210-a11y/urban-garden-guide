@@ -26,7 +26,7 @@
   }
   
   body {
-    @apply bg-slate-900 text-slate-50;
+    @apply bg-slate-950 text-slate-50;
     font-feature-settings: "rlig" 1, "calt" 1;
   }
   
@@ -57,26 +57,26 @@
 
 @layer components {
   .card {
-    @apply bg-slate-800 rounded-xl p-6 border border-slate-700;
+    @apply bg-slate-900/50 rounded-xl p-6 border border-slate-800 hover:border-teal-500/30 transition-all;
   }
   
   .btn {
-    @apply inline-flex items-center justify-center px-4 py-2 rounded-lg font-medium transition-colors;
+    @apply inline-flex items-center justify-center px-4 py-2 rounded-lg font-medium transition-all duration-200;
   }
-  
+
   .btn-primary {
-    @apply bg-teal-500 text-white hover:bg-teal-600;
+    @apply bg-teal-500 text-white hover:bg-teal-400 shadow-lg shadow-teal-500/20;
   }
-  
+
   .btn-outline {
-    @apply border border-slate-600 hover:border-teal-500 text-slate-300;
+    @apply border border-slate-700 hover:border-teal-500 text-slate-300 hover:text-teal-400 bg-slate-800/30;
   }
-  
+
   .tag {
-    @apply inline-block px-2 py-1 text-xs rounded-full bg-slate-700 text-slate-300;
+    @apply inline-block px-2 py-1 text-xs rounded-full bg-slate-800 text-teal-400 border border-slate-700;
   }
-  
+
   .text-gradient {
-    @apply bg-gradient-to-r from-teal-400 to-teal-600 bg-clip-text text-transparent;
+    @apply bg-gradient-to-r from-teal-400 via-teal-300 to-teal-500 bg-clip-text text-transparent;
   }
 }
