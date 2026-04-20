@@ -2,7 +2,7 @@
 import fs from 'fs';
 import path from 'path';
 
-const contentDirectory = path.join(process.cwd(), '../content/posts');
+const contentDirectory = '/home/stupidboi210/contentempire-nextjs/content/posts';
 
 export interface ArticleMeta {
   slug: string;
