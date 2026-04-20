@@ -70,10 +70,10 @@ export default async function ArticlePage({ params }: PageProps) {
   return (
     <article className="max-w-3xl mx-auto">
       {/* Breadcrumb */}
-      <nav className="mb-8 text-sm">
-        <Link href="/" className="text-teal-400 hover:text-teal-300">Home</Link>
-        <span className="mx-2 text-slate-500">/</span>
-        <span className="text-slate-400">{article.category}</span>
+      <nav className="mb-6 text-sm flex items-center gap-2">
+        <Link href="/" className="text-teal-400 hover:text-teal-300 transition-colors">Home</Link>
+        <span className="text-slate-600">/</span>
+        <span className="text-slate-400 capitalize">{article.category.replace('-', ' ')}</span>
       </nav>
       
       {/* Article Header */}
@@ -106,7 +106,7 @@ export default async function ArticlePage({ params }: PageProps) {
           {article.tags.map((tag) => (
             <span
               key={tag}
-              className="px-2 py-1 text-xs rounded-full bg-slate-800 text-slate-400 border border-slate-700"
+              className="px-3 py-1 text-xs rounded-full bg-slate-900/80 text-teal-400 border border-slate-700/50"
             >
               {tag}
             </span>
@@ -116,7 +116,7 @@ export default async function ArticlePage({ params }: PageProps) {
       
       {/* Hero Image */}
       {article.image.src && (
-        <div className="relative w-full aspect-video mb-8 rounded-xl overflow-hidden">
+        <div className="relative w-full aspect-video mb-10 rounded-2xl overflow-hidden shadow-2xl shadow-teal-900/20 ring-1 ring-slate-800">
           <Image
             src={article.image.src}
             alt={article.image.alt}
@@ -130,16 +130,24 @@ export default async function ArticlePage({ params }: PageProps) {
       
       {/* Article Content */}
       <div 
-        className="prose prose-invert prose-teal max-w-none"
+        className="prose prose-invert prose-teal max-w-none text-slate-300"
         dangerouslySetInnerHTML={{ __html: formattedContent }}
       />
       
       {/* Footer */}
-      <footer className="mt-12 pt-8 border-t border-slate-800">
-        <div className="bg-slate-800/50 rounded-xl p-6 border border-slate-700">
-          <h3 className="text-lg font-semibold text-slate-100 mb-2">About the Author</h3>
-          <p className="text-slate-400">
-            ContentEmpire brings you expert advice on urban gardening, container gardening, and growing your own food in small spaces.
+      <footer className="mt-16 pt-8 border-t border-slate-800">
+        <div className="bg-slate-900/50 rounded-2xl p-8 border border-slate-800">
+          <div className="flex items-center gap-3 mb-4">
+            <div className="w-12 h-12 rounded-full bg-teal-500/20 flex items-center justify-center">
+              <span className="text-2xl">🪴</span>
+            </div>
+            <div>
+              <h3 className="text-lg font-semibold text-slate-100">About ContentEmpire</h3>
+              <p className="text-sm text-slate-500">Urban Gardening Experts</p>
+            </div>
+          </div>
+          <p className="text-slate-400 leading-relaxed">
+            ContentEmpire brings you expert advice on urban gardening, container gardening, and growing your own food in small spaces. Transform your apartment balcony or windowsill into a thriving garden.
           </p>
         </div>
       </footer>

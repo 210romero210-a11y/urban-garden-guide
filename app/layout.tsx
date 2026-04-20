@@ -56,12 +56,6 @@ export default function RootLayout({
                 <Link href="/" className="text-slate-300 hover:text-teal-400 text-sm font-medium transition-colors">
                   Home
                 </Link>
-                <Link href="/articles" className="text-slate-300 hover:text-teal-400 text-sm font-medium transition-colors">
-                  Articles
-                </Link>
-                <Link href="/about" className="text-slate-300 hover:text-teal-400 text-sm font-medium transition-colors">
-                  About
-                </Link>
               </div>
             </nav>
           </div>
@@ -75,9 +69,9 @@ export default function RootLayout({
         {/* Footer */}
         <footer className="border-t border-slate-800 mt-16">
           <div className="max-w-6xl mx-auto px-4 py-12">
-            <div className="grid md:grid-cols-4 gap-8">
+            <div className="grid md:grid-cols-2 gap-8">
               {/* Brand */}
-              <div className="md:col-span-2">
+              <div>
                 <div className="flex items-center gap-2 mb-4">
                   <span className="text-2xl">🪴</span>
                   <span className="text-xl font-bold text-teal-400">Urban Garden Guide</span>
@@ -90,21 +84,9 @@ export default function RootLayout({
               
               {/* Links */}
               <div>
-                <h4 className="font-semibold text-slate-100 mb-4">Quick Links</h4>
+                <h4 className="font-semibold text-slate-100 mb-4">Explore</h4>
                 <ul className="space-y-2">
                   <li><Link href="/" className="text-slate-400 hover:text-teal-400 text-sm">Home</Link></li>
-                  <li><Link href="/articles" className="text-slate-400 hover:text-teal-400 text-sm">Articles</Link></li>
-                  <li><Link href="/about" className="text-slate-400 hover:text-teal-400 text-sm">About</Link></li>
-                </ul>
-              </div>
-              
-              {/* Categories */}
-              <div>
-                <h4 className="font-semibold text-slate-100 mb-4">Topics</h4>
-                <ul className="space-y-2">
-                  <li><Link href="/category/container-gardening" className="text-slate-400 hover:text-teal-400 text-sm">Container Gardening</Link></li>
-                  <li><Link href="/category/indoor-plants" className="text-slate-400 hover:text-teal-400 text-sm">Indoor Plants</Link></li>
-                  <li><Link href="/category/herbs" className="text-slate-400 hover:text-teal-400 text-sm">Herbs</Link></li>
                 </ul>
               </div>
             </div>

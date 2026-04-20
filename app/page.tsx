@@ -26,34 +26,26 @@ export default function Home() {
             Fresh herbs, vegetables, and flowers—grown where you&apos;re planted.
           </p>
           <div className="flex flex-wrap gap-4">
-            <Link
-              href="#articles"
-              className="btn btn-primary text-lg px-6 py-3"
-            >
-              Start Reading
-            </Link>
-            <Link
-              href="/about"
-              className="btn btn-outline text-lg px-6 py-3"
-            >
-              Learn More
-            </Link>
+            {articles.length > 0 && (
+              <Link
+                href={`/articles/${articles[0].slug}`}
+                className="btn btn-primary text-lg px-6 py-3"
+              >
+                Start Reading
+              </Link>
+            )}
           </div>
         </div>
         
         {/* Decorative elements */}
-        <div className="mt-12 flex gap-4 text-slate-600">
+        <div className="mt-12 flex gap-6 text-slate-500">
           <div className="flex items-center gap-2">
-            <span className="text-2xl">🪴</span>
-            <span className="text-sm">50+ Guides</span>
-          </div>
-          <div className="flex items-center gap-2">
-            <span className="text-2xl">🌱</span>
+            <span className="text-xl">🌱</span>
             <span className="text-sm">Fresh Content</span>
           </div>
           <div className="flex items-center gap-2">
-            <span className="text-2xl">🏠</span>
-            <span className="text-sm">Beginner Friendly</span>
+            <span className="text-xl">🏡</span>
+            <span className="text-sm">Apartment Friendly</span>
           </div>
         </div>
       </section>
@@ -63,9 +55,6 @@ export default function Home() {
         <section id="articles" className="py-12">
           <div className="flex items-center justify-between mb-8">
             <h2 className="text-3xl font-bold text-slate-100">Featured Articles</h2>
-            <Link href="/articles" className="text-teal-400 hover:text-teal-300">
-              View all →
-            </Link>
           </div>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
