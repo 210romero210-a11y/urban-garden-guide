@@ -26,12 +26,54 @@ export async function generateMetadata({ params }: PageProps) {
     title: article.seo.title || article.title,
     description: article.seo.description || article.description,
     keywords: article.seo.keywords,
+    authors: [{ name: article.author }],
     openGraph: {
       title: article.seo.title || article.title,
       description: article.seo.description || article.description,
-      images: article.seo.ogImage ? [article.seo.ogImage] : [],
+      type: 'article',
+      publishedTime: article.publishedAt,
+      modifiedTime: article.updatedAt,
+      authors: [article.author],
+      images: article.image.src ? [{ url: article.image.src, width: article.image.width, height: article.image.height }] : [],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: article.seo.title || article.title,
+      description: article.seo.description || article.description,
     },
   };
+}
+
+// JSON-LD structured data component
+function ArticleSchema({ article }: { article: any }) {
+  const schema = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": article.title,
+    "description": article.description,
+    "image": article.image.src,
+    "datePublished": article.publishedAt,
+    "dateModified": article.updatedAt,
+    "author": {
+      "@type": "Organization",
+      "name": "Urban Garden Guide"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Urban Garden Guide",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "/favicon.ico"
+      }
+    }
+  };
+  
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+    />
+  );
 }
 
 export default async function ArticlePage({ params }: PageProps) {
@@ -68,7 +110,9 @@ export default async function ArticlePage({ params }: PageProps) {
   const formattedContent = renderContent(article.content);
   
   return (
-    <article className="max-w-3xl mx-auto">
+    <>
+      <ArticleSchema article={article} />
+      <article className="max-w-3xl mx-auto">
       {/* Breadcrumb */}
       <nav className="mb-6 text-sm flex items-center gap-2">
         <Link href="/" className="text-teal-400 hover:text-teal-300 transition-colors">Home</Link>
@@ -152,5 +196,6 @@ export default async function ArticlePage({ params }: PageProps) {
         </div>
       </footer>
     </article>
+    </>
   );
 }
